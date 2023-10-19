@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+Добавление
+{% endblock %}
+{% block body %}
+{{ super() }}
+    <link rel="stylesheet" href="./static/add.css">
+    <div class="container">
+        <form action="/add" method="POST">
+          <div class="mb-3 text-white">
+            <label for="title" class="form-label">Название событий: </label>
+            <input type="title" class="form-control" name="title" id="title">
+
+          </div>
+          <div class="mb-3 text-white">
+            <label for="start" class="form-label">Начало событий: </label>
+            <input type="text" class="form-control" name="start" id="start">
+          </div>
+          <div class="mb-3 text-white">
+            <label for="end" class="form-label">Конец событий: </label>
+            <input type="text" class="form-control" name="end" id="end">
+          </div>
+          <button type="submit" class="btn btn-primary bg-black">Отправить</button>
+        </form>
+</div>
+{% endblock %}
